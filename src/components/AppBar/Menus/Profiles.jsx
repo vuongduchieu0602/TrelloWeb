@@ -30,13 +30,13 @@ function Profiles() {
         <IconButton
           onClick={handleClick}
           size="small"
-          sx={{ padding: 2 }}
+          sx={{ padding: 0.5 }}
           aria-controls={open ? 'basic-menu-profiles' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: '30px', height: '30px' }}
+            sx={{ width: '34px', height: '34px' }}
             alt="VuongDucHieu"
             src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/411676247_756188009659723_5438507185616556078_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=ips5jx1MwqAAX9nNSlX&_nc_ht=scontent.fhan2-3.fna&oh=00_AfAadAAMOk2_U8dPf-VX9JcQKcQHsTkRiL4dTHXEqNm1CQ&oe=6588629B"
           />
