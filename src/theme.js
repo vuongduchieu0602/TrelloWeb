@@ -1,4 +1,4 @@
-import { experimental_extendTheme as extendTheme} from '@mui/material/styles'
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { teal, deepOrange, cyan, orange } from '@mui/material/colors'
 
 const theme = extendTheme({
@@ -42,25 +42,19 @@ const theme = extendTheme({
     },
     MuiButton: {
       styleOverrides: {
-        // Name of the slot
-        root: ({ theme }) => (
-          {
-            textTransform: 'none',
-            color: theme.palette.primary.main,
-            fontSize: '0.875rem'
-          }
-        )
+        root: {
+          textTransform: 'none'
+        }
       }
     },
-    // MuiInputLabel: {
-    //   styleOverrides: {
-    //     // Name of the slot
-    //     root: {
-    //       // Some CSS
-    //       textTransform: 'none'
-    //     }
-    //   }
-    // },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem'
+        })
+      }
+    },
     MuiOutlinedInput: {
       styleOverrides: {
         // Name of the slot
