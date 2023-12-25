@@ -14,13 +14,13 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const MENU_STYLES = {
-  color: 'primary.main',
-  backgroundColor: 'white',
+  color: 'white',
+  backgroundColor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+    color: 'white'
   },
   '&:hover': {
     backgroundColor: 'primary.50'
@@ -38,7 +38,8 @@ function BoardBar() {
       gap: 2,
       paddingX: 2,
       overflowX: 'auto',
-      borderTop: '1px solid #00bfa5'
+      borderBottom: '1px solid white',
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2')
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Chip
@@ -74,17 +75,31 @@ function BoardBar() {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon />}>Invite</Button>
-        <AvatarGroup 
+        <Button 
+          variant="outlined" 
+          startIcon={<PersonAddIcon/>}
+          sx = {{
+            color: 'white',
+            borderColor: 'white',
+            '&:hover': {
+              borderColor: 'white'
+            }
+          }} 
+        >
+          Invite
+        </Button>
+        <AvatarGroup
           max={7}
           sx = {{
+            gap: 2,
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}
-          >
+        >
           <Tooltip title="Vuong Duc Hieu">
             <Avatar alt="Vuong Duc Hieu" src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/411676247_756188009659723_5438507185616556078_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=ips5jx1MwqAAX9nNSlX&_nc_ht=scontent.fhan2-3.fna&oh=00_AfAadAAMOk2_U8dPf-VX9JcQKcQHsTkRiL4dTHXEqNm1CQ&oe=6588629B" />
           </Tooltip>
@@ -121,7 +136,7 @@ function BoardBar() {
           <Tooltip title="Tran Thao Nguyen">
             <Avatar alt="Tran Thao Nguyen" src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/292699460_1179157166261990_4653792318499350722_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=_QvN1roG8lUAX8EkqNJ&_nc_oc=AQljA6hwg58JmbTNu8os2WzBEoLvhBN10lpOJEaIK5XsZpncALE4VGX6npjBjk72BNKfrULQayDz6RgwU49gQcmV&_nc_ht=scontent.fhan2-3.fna&oh=00_AfBg9-jqXXdRaJKK0VfXOhMbGKc0cYXwi2yNS_ZYBPVExw&oe=658CD6DD" />
           </Tooltip>
-          
+
         </AvatarGroup>
       </Box>
     </Box>
